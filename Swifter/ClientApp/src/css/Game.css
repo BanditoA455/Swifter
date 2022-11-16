@@ -1,4 +1,157 @@
-﻿.game-display-container {
+﻿
+.footer {
+    background-color: #373737;
+    color: #82d7ff;
+    text-align: center;
+    padding: 25px;
+    font-size: 20px;
+}
+
+.button {
+    font-size: 20px;
+    padding: 3px 20px 3px 20px;
+    border-radius: 10px;
+    background-color: rgb(228, 243, 255);
+}
+
+.margin-top {
+    margin-top: 40px;
+}
+
+/*----  GAME MODES  ----*/
+
+.game-modes {
+    width: 70%;
+    margin: auto;
+}
+
+.game-mode {
+    border: 2px solid;
+    padding: 15px 0 15px 0;
+    position: relative;
+    margin-bottom: 7px;
+    display: flex;
+    align-items: center;
+}
+
+.game-mode-name {
+    background-color: rgb(228, 243, 255);
+    border: 2px solid;
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+    margin: auto;
+    padding: 30px 0 30px 0;
+}
+
+.game-mode-description {
+    display: inline-block;
+    width: 55%;
+    margin-right: 10%;
+}
+
+.selected-game-mode {
+    background-color: #82d7ff;
+}
+
+/*----  HOME PAGE  ----*/
+
+.home-header {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 40px;
+}
+
+/*---- GRID SIZE SELECTOR ----*/
+
+.grid-size-container {
+    text-align: center;
+    margin: auto;
+    width: 70%;
+}
+
+.grid-size-header {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.input-field-container {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    padding: 0 10% 0 10%;
+    box-sizing: border-box;
+}
+
+.input-container {
+    display: inline;
+    margin: auto;
+}
+
+.input-label {
+    font-size: 20px;
+    margin-bottom: 3px;
+}
+
+.input-field {
+    width: 60%;
+    text-align: center;
+    font-size: 20px;
+    padding: 0px;
+}
+
+.grid-size-button {
+    margin-bottom: 15px;
+}
+
+/*----  GAME PAGE  ----*/
+
+.game-header {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.start-game-button-container {
+    text-align: center;
+}
+
+.start-game-button {
+    margin: auto;
+    margin-top: 35px;
+}
+
+.game-information-container {
+    display: flex;
+    width: 70%;
+    margin: auto;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.game-information {
+    display: inline;
+    margin: auto;
+    vertical-align: middle;
+}
+
+.quit-game-button-container {
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.quit-game-button {
+    margin-top: 47%;
+}
+
+.transparency {
+    opacity: 0.3;
+}
+
+.game-display-container {
     position: relative;
 }
 
@@ -8,6 +161,12 @@
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.final-result-and-play-button-container {
+    margin: auto;
+    text-align: center;
+    padding-top: 20%;
 }
 
 .game-manager {
@@ -24,4 +183,200 @@
 .game-item {
     width: 70px;
     height: 70px;
+}
+
+.final-result-container p {
+    font-size: 20px;
+}
+
+/*---- NAV BAR ----*/
+
+.nav-bar {
+    background-color: #373737;
+    padding: 7px;
+    font-size: 20px;
+    position: relative;
+    height: 50px;
+}
+
+.text-color {
+    color: #82d7ff;
+}
+
+.nav-bar :hover {
+    color: red;
+}
+
+.hello-text {
+}
+
+.security-container {
+    position: absolute;
+    right: 5%;
+    top: 0px;
+}
+
+.security-item {
+    display: inline-block;
+}
+
+.regular-link-container {
+    position: absolute;
+    left: 5%;
+    top: 0px;
+}
+
+.regular-link {
+    display: inline-block;
+}
+
+/*---- REGISTER PAGE ----*/
+.login-register-form-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.login-register-header {
+    margin-top: 100px;
+}
+
+.login-register-form {
+    font-size: 20px;
+}
+
+.nick-name {
+}
+
+.password {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.login-register-container {
+    margin-bottom: 500px;
+}
+
+.register-container {
+    display: flex;
+}
+
+.register-container-item {
+    display: inline-block;
+    margin: auto;
+    vertical-align: middle;
+}
+
+.register-from {
+    text-align: right;
+}
+
+.password-rules-container {
+    margin-top: 30px;
+}
+
+.security-message {
+    margin-top: 30px;
+    text-align: center;
+}
+
+/*---- HIGH SCORE PAGE ----*/
+
+.high-score-game-mode-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.high-score-game-mode {
+    font-size: 18px;
+    padding: 3px 20px 3px 20px;
+    border-radius: 10px;
+    background-color: rgb(228, 243, 255);
+    width: 70%;
+    border: 1px solid;
+    text-align: center;
+    margin: auto;
+}
+
+.high-score-selected-game-mode {
+    background-color: #82d7ff;
+}
+
+.high-score-info-item-container {
+    border: 1px solid;
+    margin-bottom: 50px;
+    padding-top: 13px;
+}
+
+.high-score-info-item {
+    text-align: center;
+    margin-bottom: 13px;
+    font-size: 18px;
+}
+
+/*---- USER PAGE ----*/
+
+.user-info-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 1px solid;
+    font-size: 18px;
+    text-align: center;
+}
+
+.user-info {
+    font-size: 18px;
+}
+
+.user-info-text {
+    padding: 5px;
+    padding-top: 7px;
+}
+
+.table-header {
+    border-bottom: 1px solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.admin-button {
+    font-size: 18px;
+    margin: 5px;
+}
+
+.demote {
+    background-color: #F58570;
+}
+
+.promote {
+    background-color: #4DF0A8;
+}
+
+/*---- GAME MODE ----*/
+
+.game-mode-form-container {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.game-mode-form {
+    margin-bottom: 10px;
+}
+
+.game-mode-text-area {
+    height: 80px;
+}
+
+.max-height {
+    height: 100%;
+}
+
+.radio-button-container {
+    border: 1px solid;
+}
+
+.game-mode-form-container
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }

@@ -1,8 +1,12 @@
 ﻿import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Header from './../GamePage/Header'
-import GameManager from '../GameManagement/GameManager';
+import GameManager from '../GameManagement/GameManager'
+import TimeCounter from '../GameManagement/TimeCounter'
+import MoveCounter from '../GameManagement/MoveCounter'
+import ScoreBoard from '../GameManagement/ScoreBoard'
 import StartGameButton from '../GameManagement/Buttons/StartGameButton';
+import PauseGameButton from '../GameManagement/Buttons/PauseGameButton'
 
 const Game = () => {
     const [gameScore, setGameScore] = useState(0)
@@ -15,7 +19,6 @@ const Game = () => {
     const [hasGameEnded, setHasGameEnded] = useState(false)
 
     const { height, width, selectedGameModeId } = useParams()
-    
 
     useEffect(() => {
         setSelectedGameMode('standard')
@@ -35,6 +38,34 @@ const Game = () => {
                     setHasGameStarted={setHasGameStarted}
                     setIsGamePaused={setIsGamePaused}
                 />
+            }
+
+            {hasGameStarted && !hasGameEnded &&
+                <div className='game-information-container'>
+                    <div className='game-information'>
+                        <MoveCounter
+                            moveCount={moveCount}
+                        />
+                        <TimeCounter
+                            timeElapsed={timeElapsed}
+                            setTimeElapsed={setTimeElapsed}
+                            isGamePaused={isGamePaused}
+                        />
+                    </div>
+                    <div className='game-information'>
+                        <PauseGameButton
+                            isGamePaused={isGamePaused}
+                            setIsGamePaused={setIsGamePaused}
+                            draggable={draggable}
+                            setDraggable={setDraggable}
+                        />
+                    </div>
+                    <div className='game-information'>
+                        <ScoreBoard
+                            score={gameScore}
+                        />
+                    </div>
+                </div>
             }
 
             {hasGameStarted &&
