@@ -1,5 +1,6 @@
 ﻿import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import Header from './../GamePage/Header'
 import GameManager from '../GameManagement/GameManager';
 import StartGameButton from '../GameManagement/Buttons/StartGameButton';
 
@@ -23,8 +24,11 @@ const Game = () => {
     return (
         <div>
 
-            <h1>Game page</h1>
-            <p>This is the game page.</p>
+            <Header
+                height={height}
+                width={width}
+                gameModeName={selectedGameMode.displayName}
+            />
 
             {!hasGameStarted &&
                 <StartGameButton
