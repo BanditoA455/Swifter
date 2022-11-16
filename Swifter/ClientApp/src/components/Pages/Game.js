@@ -1,4 +1,5 @@
 ﻿import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import GameManager from '../GameManagement/GameManager';
 
 const Game = () => {
@@ -11,8 +12,8 @@ const Game = () => {
     const [hasGameStarted, setHasGameStarted] = useState(true) // needs to be false
     const [hasGameEnded, setHasGameEnded] = useState(false)
 
-    const height = 8
-    const width = 8
+    const { height, width, selectedGameModeId } = useParams()
+    
 
     useEffect(() => {
         setSelectedGameMode('standard')
