@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Swifter.Data.Models
 {
@@ -18,13 +13,9 @@ namespace Swifter.Data.Models
         public string Description { get; set; }
         [Required]
         public bool HasRules { get; set; }
-        [Required]
         public int? Height { get; set; }
-        [Required]
         public int? Width { get; set; }
-        [Required]
         public string Type { get; set; }
-        [Required]
         public int? Duration { get; set; }
     }
 }
