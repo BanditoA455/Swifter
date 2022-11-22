@@ -1,6 +1,7 @@
 ﻿import React, { useEffect, useState } from 'react'
 import GridSizeSelector from '../GameManagement/GridSizeSelector'
 import GameModes from '../GameManagement/GameModes/GameModes'
+import Header from '../HomePage/Header'
 import { useNavigate } from "react-router-dom";
 
 const Home = () =>
@@ -25,8 +26,7 @@ const Home = () =>
     return (
         <div>
 
-            <h1>Home page</h1>
-            <p>This is the home page.</p>
+            <Header/>
 
             <GridSizeSelector
                 redirectToGamePage={redirectToGamePage}
