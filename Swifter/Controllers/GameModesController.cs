@@ -14,8 +14,9 @@ namespace Swifter.Controllers
             _context = context;
         }
 
-        [Route("GetAllGameModes")]
-        public IEnumerable<GameMode> GetAllGameModes()
+        [HttpGet]
+        [Route("GetAll")]
+        public async Task<IEnumerable<GameMode>> GetAllGameModes()
         {
             return _context.GameModes;
         }
