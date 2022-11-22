@@ -23,12 +23,24 @@ namespace Swifter.Controllers
 
         [HttpGet]
         [Route("{id}")]
-        public async Task<IActionResult> GetAllGameModes(int id)
+        public async Task<IActionResult> GetSpecificGameMode(int id)
         {
             var gameMode = _context.GameModes.FirstOrDefault(x => x.Id == id);
             if (gameMode == null)
             {
                 return BadRequest("Invalid id");
+            }
+            return Ok(gameMode);
+        }
+
+        [HttpGet]
+        [Route("Type/{type}")]
+        public async Task<IActionResult> GetSpecificGameModeByType(string type)
+        {
+            var gameMode = _context.GameModes.FirstOrDefault(x => x.Type == type).Id;
+            if (gameMode == null)
+            {
+                return BadRequest("Invalid type");
             }
             return Ok(gameMode);
         }
