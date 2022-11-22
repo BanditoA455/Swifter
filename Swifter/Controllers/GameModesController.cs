@@ -21,5 +21,17 @@ namespace Swifter.Controllers
             return _context.GameModes;
         }
 
+        [HttpGet]
+        [Route("{id}")]
+        public async Task<IActionResult> GetAllGameModes(int id)
+        {
+            var gameMode = _context.GameModes.FirstOrDefault(x => x.Id == id);
+            if (gameMode == null)
+            {
+                return BadRequest("Invalid id");
+            }
+            return Ok(gameMode);
+        }
+
     }
 }
