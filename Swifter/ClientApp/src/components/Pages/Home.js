@@ -1,5 +1,6 @@
 ﻿import React, { useEffect, useState } from 'react'
 import GridSizeSelector from '../GameManagement/GridSizeSelector'
+import GameModes from '../GameManagement/GameModes/GameModes'
 import { useNavigate } from "react-router-dom";
 
 const Home = () =>
@@ -7,8 +8,6 @@ const Home = () =>
     const [height, setHeight] = useState(null)
     const [width, setWidth] = useState(null)
     const [selectedGameModeId, setSelectedGameModeId] = useState(1)
-
-    const [gameModes, setGameModes] = useState([])
 
     let navigate = useNavigate();
 
@@ -22,15 +21,6 @@ const Home = () =>
             }
         );
     }
-
-    useEffect(() => {
-        getAllGameModes()
-        async function getAllGameModes() {
-            const response = await fetch('api/GameModes/GetAll')
-            const data = await response.json()
-            setGameModes(data)
-        }
-    }, [])
 
     return (
         <div>
@@ -47,13 +37,12 @@ const Home = () =>
                 setWidth={setWidth}
             />
 
-            {gameModes.map((gameMode) => {
-                return (
-                    <div>
-                        { gameMode.displayName }
-                    </div>
-                )
-            })}
+            <GameModes
+                selectedGameModeId={selectedGameModeId}
+                setSelectedGameModeId={setSelectedGameModeId}
+                setHeight={setHeight}
+                setWidth={setWidth}
+            />       
 
         </div>
     );
